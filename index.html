@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Talking Clock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container px-4 py-5">
+        <h1 class="mb-5">Talking Clock Technical Challenge</h1>
+        <h5 class="mb-5">Developed by Kar Yoke Wong, 25/05/2022</h5>
+        <h2 class="pb-2 border-bottom">Objective 1</h2>
+        <div class="row">
+            <div class="feature col">
+                <label>Current Time:</label>
+                <span id="current_time"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Objective 2</h2>
+        <div class="row">
+            <div class="feature col">
+                <div class="row g-2 align-items-center">
+                    <div class="col-auto">
+                      <label for="input_time" class="col-form-label">Please choose a time:</label>
+                    </div>
+                    <div class="col-auto">
+                      <input type="time" id="input_time" class="form-control" onchange="get_time_and_convert_to_text(this);">
+                    </div>
+                </div>
+                <div id="chosen_time_display"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Objective 3</h2>
+        <div class="row">
+            <div class="feature col">
+                <div class="row g-2 align-items-center">
+                    <div class="col-auto">
+                      <label for="input_time2" class="col-form-label">Please choose a time:</label>
+                    </div>
+                    <div class="col-auto">
+                      <input type="time" id="input_time2" class="form-control" onchange="update_url(this);">
+                    </div>
+                </div>
+                <div><a id="api_url" href="/api.aspx">Click this URL to call the API</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
